@@ -9,7 +9,7 @@ Either you can use clone git Repositry or use directly
 ## Create a file called 'app.js'
 
 ```javascript
-//app.js
+// app.js
 const http = require("http");
 
 http.createServer((req, res) => {
