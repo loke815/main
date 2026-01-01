@@ -16,3 +16,6 @@ http.createServer((req, res) => {
   res.end("Multi-stage Dockerfile practice");
 }).listen(3000);
 
+## create a file called dockerfile
+dockerfile
+
