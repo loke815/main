@@ -42,6 +42,7 @@ git clone <your-git-repository-url>
 cd <repository-name>
 
 🟢 Create app.js
+```Javascript
 // app.js
 const http = require("http");
 
@@ -50,6 +51,7 @@ http.createServer((req, res) => {
 }).listen(3000);
 
 🟢 Create Dockerfile (Multi-Stage Build)
+```dockerfile
 # Stage 1: Build
 FROM node:18-alpine AS builder
 WORKDIR /app
@@ -100,6 +102,7 @@ Using VirtualBox driver:
 minikube start --memory=4096 --driver=virtualbox
 
 🟢 Create deployment.yml
+```yaml 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -130,6 +133,7 @@ kubectl get deployments
 kubectl get pods
 
 🟢 Create service.yml
+```yml
 apiVersion: v1
 kind: Service
 metadata:
