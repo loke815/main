@@ -1,38 +1,38 @@
 🚀 Docker Image Creation & Kubernetes Deployment (Step-by-Step)
 
-        This guide explains how to:
+This guide explains how to:
 
-        Create a Docker image using a multi-stage Dockerfile
+Create a Docker image using a multi-stage Dockerfile
 
-        Push the image to Docker Hub
+Push the image to Docker Hub
 
-        Deploy the application on Kubernetes using Minikube
+Deploy the application on Kubernetes using Minikube
 
-        Expose and access the application
+Expose and access the application
 
-        Update and rollback deployments
+Update and rollback deployments
 
 ✅ Prerequisites
 
 Make sure the following are installed and running:
 
-        docker --version
-        docker info
-        kubectl version --client
-        minikube status
+docker --version
+docker info
+kubectl version --client
+minikube status
 
 
 Ensure:
 
-      Docker is installed
+Docker is installed
 
-      Docker Desktop is running
+Docker Desktop is running
 
-      Docker Hub account available
+Docker Hub account available
 
-      Kubernetes CLI (kubectl) installed
+Kubernetes CLI (kubectl) installed
 
-      Minikube installed
+Minikube installed
 
 📥 Clone Repository (Optional)
 
