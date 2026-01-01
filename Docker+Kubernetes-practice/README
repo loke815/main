@@ -6,14 +6,13 @@ First create image using dockerfile and app.js
         --- kubernetes version
         --- minikube status
 Either you can use clone git Repositry or use directly
-## Create a file called app.js
----
-```js
+## Create a file called 'app.js'
 
+```javascript
 //app.js
 const http = require("http");
 
 http.createServer((req, res) => {
   res.end("Multi-stage Dockerfile practice");
 }).listen(3000);
----
+
