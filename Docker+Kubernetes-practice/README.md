@@ -1,4 +1,4 @@
-🚀 Docker Image Creation & Kubernetes Deployment (Step-by-Step)
+Docker Image Creation & Kubernetes Deployment (Step-by-Step)
 
 This guide explains how to:
 
