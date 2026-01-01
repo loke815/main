@@ -52,7 +52,7 @@ minkube start --memory=4096 --driver=virtualbox
 ## create deployment.yml file 
 vim deployment.yml
 yml 
-  apiVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: demo-deployment
@@ -72,4 +72,49 @@ spec:
         ports:
         - containerPort: 3000
 
+kubectl apply -f deployment.yml
+
+---check 
+ kubectl get deployments
+ kubectl get pods
+
+create service
+To access your app outside the cluster,expose it via Nodeport (or) LoadBalancer.....
+
+## create service.yml
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-service
+spec:
+  selector:
+    app: demo-app
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+
+kubectl apply -f service.yml
+
+--check service 
+kubectl get svc
+
+Access app 
+
+minikube service demo-service
+This open app local browser automatically
+if its not working and says like ! Because you are using a Docker driver on windows, the terminal needs to be open to run it.
+
+try this 
+kubectl port-forward service/demo-service 3000:3000
+
+update deployment
+  if you push a new image version (eg:2)
+
+kubectl set image deployment/demo-deployment demo-container=lokesh815/my-first-docker-image:2
+kubectl rollout status deployment/demo-deployment
+
+Rollback (if needed)
+kubectl rollout undo deployment/demo-deployment
 
