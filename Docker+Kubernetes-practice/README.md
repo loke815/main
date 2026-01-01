@@ -45,6 +45,7 @@ cd <repository-name>
 ```Javascript
 // app.js
 const http = require("http");
+---
 
 http.createServer((req, res) => {
   res.end("Multi-stage Dockerfile practice");
