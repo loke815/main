@@ -51,4 +51,25 @@ minkube start --memory=4096 --driver=virtualbox
 
 ## create deployment.yml file 
 vim deployment.yml
+yml 
+  apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-app
+  template:
+    metadata:
+      labels:
+        app: demo-app
+    spec:
+      containers:
+      - name: demo-container
+        image: lokesh815/my-first-docker-image1:latest
+        ports:
+        - containerPort: 3000
+
 
