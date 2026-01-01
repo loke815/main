@@ -18,4 +18,37 @@ http.createServer((req, res) => {
 
 ## create a file called dockerfile
 dockerfile
+# Stage 1: Build
+FROM node:18-alpine AS builder
+WORKDIR /app
+COPY package.json .
+RUN npm install
+COPY . .
+
+# Stage 2: Runtime
+FROM node:18-alpine
+WORKDIR /app
+COPY --from=builder /app /app
+EXPOSE 3000
+CMD ["node", "app.js"]
+
+docker build -t lokesh815/my-first-docker-image1:latest .
+
+docker run -it lokesh815/my-first-docker-image
+
+login to docker registry
+
+docker push lokesh815/my-first-docker-image:latest
+
+After successfully create image check for kubernetes 
+
+kubectl version
+
+Next minikube status
+minikube start( it runs in docker desktop driver if you don't have any driver like virtualbox..)
+if you have virtualbox
+minkube start --memory=4096 --driver=virtualbox
+
+## create deployment.yml file 
+vim deployment.yml
 
