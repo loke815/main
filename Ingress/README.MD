@@ -42,7 +42,7 @@ Ingress rules can route traffic based on:
 
 Here are widely used controllers:
 
-4
+
 1. NGINX Ingress Controller
 
 Most common/default choice in Kubernetes setups
