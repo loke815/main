@@ -63,6 +63,7 @@ Implements business logic
 ➡️ CRD + Controller = Operator
 
 4️⃣ Simple CRD Example
+
 Define a CRD called MyApp
 ```
 apiVersion: apiextensions.k8s.io/v1
@@ -94,9 +95,9 @@ spec:
 ````
 
 Apply it:
-
+```
 kubectl apply -f myapp-crd.yaml
-
+```
 5️⃣ Create a Custom Resource (CR)
 
 Now you can create your own object:
@@ -111,15 +112,15 @@ spec:
 ```
 
 Apply:
-
+```
 kubectl apply -f myapp.yaml
-
+```
 
 Check:
-
+```
 kubectl get myapps
 kubectl describe myapp sample-app
-
+```
 6️⃣ What Happens Without a Controller?
 
 Kubernetes stores the CR
