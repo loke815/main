@@ -36,6 +36,7 @@ Istio uses VirtualService, DestinationRule
 ArgoCD uses Application
 
 3️⃣ Key Components
+
 🔹 1. CRD (CustomResourceDefinition)
 
 Defines:
