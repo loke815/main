@@ -149,15 +149,23 @@ Operator SDK
 Metacontroller
 
 8️⃣ CR vs CRD (Interview Question)
+
 Feature	CRD	CR
+
 Purpose	Defines new resource type	Instance of the resource
+
 Example	MyApp schema	sample-app
+
 Created by	Platform/DevOps	Users / Automation
+
 9️⃣ When to Use Custom Resources?
 
 ✅ Building Kubernetes platforms
+
 ✅ Writing operators
+
 ✅ Managing complex apps
+
 ❌ Simple apps (use Deployments instead)
 
-🔟
+
