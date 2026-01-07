@@ -125,14 +125,15 @@ data:
   APP_ENV: production
   APP_PORT: "5000"
 ```
-```
+
 #Secret
 you can also use to create vim secret.yml
 
-```
+
 for secret
-    #you can also create like this
-    kubectl create secret generic test-secret --from-literal = APP_PORT="5000"
+
+     #you can also create like this
+     kubectl create secret generic test-secret --from-literal = APP_PORT="5000"
 
 
      kubectl describe secret test-secret
