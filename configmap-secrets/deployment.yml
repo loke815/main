@@ -15,11 +15,12 @@ spec:
       containers:
       - name: demo-container
         image: lokesh815/my-first-docker-image1:latest
-        env:
-         - name: APP_PORT
-           valueFrom:
-              configMapKeyRef:
-                name: app-config
-                key: APP_PORT
+        volumeMounts:
+        - name: app-connection
+          mountPath: /opt
         ports:
         - containerPort: 3000
+      volumes:
+      - name: app-connection
+        configMap:
+          name: app-config
