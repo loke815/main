@@ -18,7 +18,7 @@ kubectl apply -f cm.yml
 ```
 kubectl get cm
 ```
- kubectl describe cm app-config
+    kubectl describe cm app-config
 
 ```
 #deployment.yml
