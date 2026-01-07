@@ -1,0 +1,9 @@
+   volumeMounts:
+     - name: app-connection
+       mountPath: "/opt"
+   ports:
+     - containerPort: 8000
+volumes:
+  - name: app-connection
+    configMap:
+       name: app-config

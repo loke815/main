@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loki-demo-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-app
+  template:
+    metadata:
+      labels:
+        app: demo-app
+    spec:
+      containers:
+      - name: demo-container
+        image: lokesh815/my-first-docker-image1:latest
+        env:
+         - name: APP_PORT
+           valueFrom:
+              configMapKeyRef:
+                name: app-config
+                key: APP_PORT
+        ports:
+        - containerPort: 3000

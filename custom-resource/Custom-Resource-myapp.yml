@@ -1,0 +1,7 @@
+apiVersion: devops.com/v1
+kind: MyApp
+metadata:
+  name: sample-app
+spec:
+  replicas: 3
+  image: nginx:latest
