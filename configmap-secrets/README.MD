@@ -57,6 +57,10 @@ kubectl apply -f deployment.yml
 ```
 kubectl get pods 
 ```
+
+VolumesMounts
+
+
 ```
  kubectl exec -it loki-demo-deployment-6798749b7-n5s97  -- sh
 /app # env | grep APP
