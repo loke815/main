@@ -9,10 +9,16 @@ data:
   APP_ENV: production
   APP_PORT: "3000"
 ```
+```
 vim cm.yml
+```
+```
 kubectl apply -f cm.yml
+```
+```
 kubectl get cm
-kubectl describe cm app-config
+```
+ kubectl describe cm app-config
 
 ```
 #deployment.yml
@@ -42,8 +48,17 @@ spec:
         ports:
         - containerPort: 3000
 ```
+```
 vim deployment.yml
+```
+```
 kubectl apply -f deployment.yml
-kubectl get pods -w
+```
+```
+kubectl get pods 
+```
+```
  kubectl exec -it loki-demo-deployment-6798749b7-n5s97  -- sh
- env | grep APP
+/app # env | grep APP
+ you can get 'APP_PORT= '
+```
