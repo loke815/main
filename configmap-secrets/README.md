@@ -58,9 +58,9 @@ kubectl apply -f deployment.yml
 kubectl get pods 
 ```
 ```
- kubectl exec -it loki-demo-deployment-6798749b7-n5s97  -- sh
-/app # env | grep APP
- you can get 'APP_PORT= '
+     kubectl exec -it loki-demo-deployment-6798749b7-n5s97  -- sh
+     /app # env | grep APP
+     #you can get 'APP_PORT= '
 ```
 
 VolumeMounts:
@@ -107,9 +107,9 @@ spec:
 ```
 Same steps for apply, get pods, describe 
 
- kubectl exec -it loki-demo-deployment-595f4cbf8c-djhgq  -- sh
-/app # cat /opt/APP_PORT |more
-2000/app #
+        kubectl exec -it loki-demo-deployment-595f4cbf8c-djhgq  -- sh
+       /app # cat /opt/APP_PORT |more
+        2000/app #
 
 
 SECRET 
@@ -140,5 +140,6 @@ for secret
 ```
 kubectl edit secret test-secret
 #its open in encrepted
-echo NTAwMA== | base64 --decode
 ```
+      echo NTAwMA== | base64 --decode
+
